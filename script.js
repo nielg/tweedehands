@@ -6,3 +6,9 @@ function dupeCards (){
     cardGallary.appendChild(newCard);
 }
 dupeCards()
+dupeCards()
+dupeCards()
+dupeCards()
+dupeCards()
+dupeCards()
+dupeCards()
