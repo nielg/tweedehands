@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>like</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+    <header>
+        <div id="leftHeader">
+            <div id="headerLogoDiv" onclick="dupeCards()">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+        </div>
+
+        <div id="rightHeader">
+            <div id="headerShoppingCartContainer">
+                <img src="img/shoppingCart.svg" alt="shoppingCart">
+                <p>My Shopping Basket</p>
+            </div>
+
+            <div id="headerProfiel">
+                <img src="img/profiel.svg" alt="profiel">
+                <p>Profiel</p>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div id="searchDiv">
+            <div id="searchBar" onclick="searchBarFocus(this)">
+                <img src="img/searchIcon.svg" alt="search icon">
+                <input type="text" name="search bar" id="inputSearchBar">
+            </div>
+            <div id="searchSuggestionsDiv">
+                <div class="searchSuggestion" onclick="search('all', this)">all</div>
+                <div class="searchSuggestion" onclick="search('keuken', this)">keuken</div>
+                <div class="searchSuggestion" onclick="search('onderhoud', this)">onderhoud</div>
+                <div class="searchSuggestion" onclick="search('stofzuigers', this)">stofzuigers</div>
+                <div class="searchSuggestion" onclick="search('interieur', this)">interieur</div>
+            </div>
+        </div>
+        <div id="cardGallery"></div>
+        <div id="cardExampels">
+            <div class="cardContainer" ondblclick="like(this, event)" catagory="keuken mixer">
+                <div class="cardHeading">
+                    <h1>mixer</h1>
+                    <div class="cardLikeCounterDiv">
+                        <p class="cardLikeCounter">0</p>
+                        <img src="img/emptyHeart.svg" alt="heart" class="cardHeartLikeCounter" onclick="likeOnHeart(this, event)">
+                    </div>
+                    <img src="img/redHeart.svg" alt="heart" class="heartImg">
+                </div>
+                <div class="cardImgItemContainer">
+                    <img src="img/mixer.jpg" alt="car">
+                </div>
+
+                <div class="cardBottom">
+                    <div class="cardBottomContentDescriptionContainer">
+                        <div class="cardBottomContentDescription">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at animi amet sint doloribus voluptates commodi praesentium architecto cupiditate. Minima nihil voluptas dicta cumque reiciendis aliquam exercitationem itaque eveniet debitis?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil minus rem excepturi! Necessitatibus exercitationem perferendis natus ipsum</p>
+                        </div>
+                        <div class="cardShowMoreBtn">
+                            <p onclick="showMore(this)">show more ...</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="cardPriceContainer">
+                            <p>20.945 $</p>
+                        </div>
+                        <div class="cardBuyNowBtn" onclick="addToBasket(this)">
+                            <div class="addToBasketImgDiv">
+                                <img src="img/addToShoppingCart.svg" alt="" class="tiltTrue">
+                            </div>
+                            <p>Add To Basket</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContainer" ondblclick="like(this, event)" catagory="onderhoud vuilblik">
+                <div class="cardHeading">
+                    <h1>vuilblik</h1>
+                    <div class="cardLikeCounterDiv">
+                        <p class="cardLikeCounter">0</p>
+                        <img src="img/emptyHeart.svg" alt="heart" class="cardHeartLikeCounter" onclick="likeOnHeart(this, event)">
+                    </div>
+                    <img src="img/redHeart.svg" alt="heart" class="heartImg">
+                </div>
+                <div class="cardImgItemContainer">
+                    <img src="img/vuilblik.webp" alt="car">
+                </div>
+
+                <div class="cardBottom">
+                    <div class="cardBottomContentDescriptionContainer">
+                        <div class="cardBottomContentDescription">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at animi amet sint doloribus voluptates commodi praesentium architecto cupiditate. Minima nihil voluptas dicta cumque reiciendis aliquam exercitationem itaque eveniet debitis?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil minus rem excepturi! Necessitatibus exercitationem perferendis natus ipsum</p>
+                        </div>
+                        <div class="cardShowMoreBtn">
+                            <p onclick="showMore(this)">show more ...</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="cardPriceContainer">
+                            <p>12.99 $</p>
+                        </div>
+                        <div class="cardBuyNowBtn" onclick="addToBasket(this)">
+                            <div class="addToBasketImgDiv">
+                                <img src="img/addToShoppingCart.svg" alt="" class="tiltTrue">
+                            </div>
+                            <p>Add To Basket</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContainer" ondblclick="like(this, event)" catagory="interieur lamp">
+                <div class="cardHeading">
+                    <h1>lamp</h1>
+                    <div class="cardLikeCounterDiv">
+                        <p class="cardLikeCounter">0</p>
+                        <img src="img/emptyHeart.svg" alt="heart" class="cardHeartLikeCounter" onclick="likeOnHeart(this, event)">
+                    </div>
+                    <img src="img/redHeart.svg" alt="heart" class="heartImg">
+                </div>
+                <div class="cardImgItemContainer">
+                    <img src="img/lamp.avif" alt="car">
+                </div>
+
+                <div class="cardBottom">
+                    <div class="cardBottomContentDescriptionContainer">
+                        <div class="cardBottomContentDescription">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at animi amet sint doloribus voluptates commodi praesentium architecto cupiditate. Minima nihil voluptas dicta cumque reiciendis aliquam exercitationem itaque eveniet debitis?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil minus rem excepturi! Necessitatibus exercitationem perferendis natus ipsum</p>
+                        </div>
+                        <div class="cardShowMoreBtn">
+                            <p onclick="showMore(this)">show more ...</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="cardPriceContainer">
+                            <p>34.99 $</p>
+                        </div>
+                        <div class="cardBuyNowBtn" onclick="addToBasket(this)">
+                            <div class="addToBasketImgDiv">
+                                <img src="img/addToShoppingCart.svg" alt="" class="tiltTrue">
+                            </div>
+                            <p>Add To Basket</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardContainer" ondblclick="like(this, event)" catagory="stofzuigers">
+                <div class="cardHeading">
+                    <h1>stofzuiger</h1>
+                    <div class="cardLikeCounterDiv">
+                        <p class="cardLikeCounter">0</p>
+                        <img src="img/emptyHeart.svg" alt="heart" class="cardHeartLikeCounter" onclick="likeOnHeart(this, event)">
+                    </div>
+                    <img src="img/redHeart.svg" alt="heart" class="heartImg">
+                </div>
+                <div class="cardImgItemContainer">
+                    <img src="img/stofzuiger.webp" alt="car">
+                </div>
+
+                <div class="cardBottom">
+                    <div class="cardBottomContentDescriptionContainer">
+                        <div class="cardBottomContentDescription">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui at animi amet sint doloribus voluptates commodi praesentium architecto cupiditate. Minima nihil voluptas dicta cumque reiciendis aliquam exercitationem itaque eveniet debitis?  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil minus rem excepturi! Necessitatibus exercitationem perferendis natus ipsum</p>
+                        </div>
+                        <div class="cardShowMoreBtn">
+                            <p onclick="showMore(this)">show more ...</p>
+                        </div>
+                    </div>
+                    <div class="cardFooter">
+                        <div class="cardPriceContainer">
+                            <p>49.99 $</p>
+                        </div>
+                        <div class="cardBuyNowBtn" onclick="addToBasket(this)">
+                            <div class="addToBasketImgDiv">
+                                <img src="img/addToShoppingCart.svg" alt="" class="tiltTrue">
+                            </div>
+                            <p>Add To Basket</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="card.js"></script>
+</body>
+</html>
